@@ -1,0 +1,11 @@
+.left-bar{
+    width: 50%;
+    border: 1px solid rgb(201, 190, 190);
+}
+.right-bar{
+    width: 50%;
+    border: 1px solid rgb(201, 190, 190)
+}
+.link-btn{
+    text-decoration: none;
+}
