@@ -29,7 +29,7 @@ const AddItems = () => {
   return (
     <div className=" container my-5 ">
       <div className="form-container rounded border bg-light border-dark w-75 m-auto">
-        <h1 className="text-center my-4 text"> Add a New Item</h1>
+        <h1 className="text-center my-4 text"> Add A New Items</h1>
         <div className="w-75 mx-auto">
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
