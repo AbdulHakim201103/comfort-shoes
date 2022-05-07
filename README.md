@@ -23,4 +23,6 @@ Website Live Link:().
 * React Bootstrap ব্যবহার করা হয়েছে।
 * React Form ব্যবহার করা হয়েছে।
 * React Route ব্যবহার করা হয়েছে ।
-* React Toast ব্যবহার করা হয়েছে ।
+* Heroku ব্যবহার করা হয়েছে ।
+* NodeJS ব্যবহার করা হয়েছে ।
+* MongoDB ব্যবহার করা হয়েছে ।
