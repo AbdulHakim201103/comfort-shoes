@@ -39,7 +39,7 @@ const MyItems = () => {
 
   return (
     <div className="container bg-light my-5">
-      <h1 className="py-5 text-danger text-center">MyItems</h1>
+      <h1 className="py-5 text-danger text-center">My Items</h1>
       <div className="inventoryContainer">
         {
           items?.length && items.map(item => <CardGroup>
