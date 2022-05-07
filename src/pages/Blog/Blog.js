@@ -7,7 +7,7 @@ const Blog = () => {
       <h1 className="text-center text-danger">Blog</h1>
       <div>
         <div className="">
-          <h3 className="text-center text-success my-5">JavaScript এবং NodeJS এর মধ্যে পার্থক্য কি?</h3>
+          <h3 className="text-center text-success my-5">01. JavaScript এবং NodeJS এর মধ্যে পার্থক্য কি?</h3>
           <div className="d-flex p-3">
             <p className="me-3">
               JavaScript একটা প্রোগ্রামিং ভাষা।যা Websites এ Script লেখার জন্য ব্যবহার করা হয়।এটি
