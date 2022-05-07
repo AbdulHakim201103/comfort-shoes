@@ -25,7 +25,7 @@ const ManageInventory = () => {
   };
   return (
     <div className="container bg-light my-5">
-      <h1 className="py-5 text-danger text-center">Manage Item</h1>
+      <h1 className="py-5 text-danger text-center">Manage Items</h1>
       <div className="d-flex my-3 justify-content-center align-content-center">
           <Link className="btn w-25 mb-4 btn-primary" to="/additem">
               Add New Item +
