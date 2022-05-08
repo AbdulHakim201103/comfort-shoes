@@ -15,6 +15,7 @@ Website Live Link:(https://comfort-shoes-a8089.web.app/).
 * Register Page তৈরি করা হয়েছে।
 * RequireAuth ব্যবহার করা হয়েছে।
 * Authentication করা হয়েছে।
+* Toast দেখানো হয়েছে।
 * Error দেখানো হয়েছে।
 
 ## Website যা যা ব্যবহার করা হয়েছে:
@@ -22,6 +23,7 @@ Website Live Link:(https://comfort-shoes-a8089.web.app/).
 * Firebase ব্যবহার করা হয়েছে।
 * React Bootstrap ব্যবহার করা হয়েছে।
 * React Form ব্যবহার করা হয়েছে।
+* React Toast ব্যবহার করা হয়েছে।
 * React Route ব্যবহার করা হয়েছে ।
 * Heroku ব্যবহার করা হয়েছে ।
 * NodeJS ব্যবহার করা হয়েছে ।
