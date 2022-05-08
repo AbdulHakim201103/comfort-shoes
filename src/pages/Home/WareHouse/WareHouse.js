@@ -4,13 +4,13 @@ import extar1 from "../../../images/extar1.jpg";
 
 const WareHouse = () => {
   return (
-    <div className="container my-5 bg-light rounded-3 p-5">
+    <div className="container my-5 bg-light rounded-3 ">
       <div className="extra">
-        <div className="mx-auto">
+        <div className="text-center ">
           <img className="w-100" src={extar1} alt="" />
         </div>
-        <div className="mx-auto">
-          <h1 className="text-center text-danger">Comfort Shoes</h1>
+        <div className="text-center my-4">
+          <h1 className="text-center my-4 text-danger">Comfort Shoes</h1>
           <div>
             <p>
               Get great deals every day at The Warehouse. Shop online and browse through our massive

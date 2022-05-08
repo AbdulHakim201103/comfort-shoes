@@ -6,19 +6,23 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 
 const ManageInventory = () => {
-  const [items,setItems] = useInventory([]);
+  const [items, setItems] = useInventory([]);
 
   const handleDelete = (id) => {
+    console.log(id);
     const confirm = window.confirm("Are you Sure?");
     if (confirm) {
       const url = `https://safe-brook-20632.herokuapp.com/inventory/${id}`;
+      console.log(url);
       fetch(url, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
+          console.log(data);
           toast("Stock Delete Successfully");
-          const remaining = items.filter(item => item._id !== id );
+          const remaining = items.filter((item) => item._id !== id);
+          console.log(remaining);
           setItems(remaining);
         });
     }
@@ -27,10 +31,10 @@ const ManageInventory = () => {
     <div className="container bg-light my-5">
       <h1 className="py-5 text-danger text-center">Manage Items</h1>
       <div className="d-flex my-3 justify-content-center align-content-center">
-          <Link className="btn w-25 mb-4 btn-primary" to="/additem">
-              Add New Item +
-            </Link>
-          </div>
+        <Link className="btn w-25 mb-4 btn-primary" to="/additem">
+          Add New Item +
+        </Link>
+      </div>
       <div className="inventoryContainer">
         {items.map((item) => (
           <CardGroup>

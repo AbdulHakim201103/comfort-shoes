@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 const MyItems = () => {
   const [items, setItems] = useState({});
   const [user] = useAuthState(auth);
-  
 
   useEffect(() => {
     if (user?.email) {
@@ -31,7 +30,7 @@ const MyItems = () => {
         .then((res) => res.json())
         .then((data) => {
           toast("Stock Delete Successfully");
-          const remaining = items.filter(item => item._id !== id );
+          const remaining = items.filter((item) => item._id !== id);
           setItems(remaining);
         });
     }
@@ -41,41 +40,42 @@ const MyItems = () => {
     <div className="container bg-light my-5">
       <h1 className="py-5 text-danger text-center">My Items</h1>
       <div className="inventoryContainer">
-        {
-          items?.length && items.map(item => <CardGroup>
-            <Card>
-              <Card.Img variant="top" src={item.img} />
-              <Card.Body>
-                <Card.Title className="text-danger">
-                  <h2>{item.name}</h2>
-                </Card.Title>
-                <Card.Text>
-                  <small>id: {item._id}</small>
-                </Card.Text>
-                <Card.Text>
-                  <small>Supplier: {item.supplier}</small>
-                </Card.Text>
-                <Card.Text>
-                  <h5>Quantity :{item.quantity}</h5>
-                </Card.Text>
-                <Card.Text>
-                  <h5>Sold :{item.Sold}</h5>
-                </Card.Text>
-                <Card.Text>
-                  <h3>Price: &{item.price}</h3>
-                </Card.Text>
-                <Card.Text>{item.description}</Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <div className="d-flex justify-content-center">
-                  <button onClick={() => handleDelete(item._id)} className="btn btn-danger w-75">
-                    Delete
-                  </button>
-                </div>
-              </Card.Footer>
-            </Card>
-          </CardGroup>)
-        }
+        {items?.length &&
+          items.map((item) => (
+            <CardGroup>
+              <Card>
+                <Card.Img variant="top" src={item.img} />
+                <Card.Body>
+                  <Card.Title className="text-danger">
+                    <h2>{item.name}</h2>
+                  </Card.Title>
+                  <Card.Text>
+                    <small>id: {item._id}</small>
+                  </Card.Text>
+                  <Card.Text>
+                    <small>Supplier: {item.supplier}</small>
+                  </Card.Text>
+                  <Card.Text>
+                    <h5>Quantity :{item.quantity}</h5>
+                  </Card.Text>
+                  <Card.Text>
+                    <h5>Sold :{item.Sold}</h5>
+                  </Card.Text>
+                  <Card.Text>
+                    <h3>Price: &{item.price}</h3>
+                  </Card.Text>
+                  <Card.Text>{item.description}</Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  <div className="d-flex justify-content-center">
+                    <button onClick={() => handleDelete(item._id)} className="btn btn-danger w-75">
+                      Delete
+                    </button>
+                  </div>
+                </Card.Footer>
+              </Card>
+            </CardGroup>
+          ))}
         <ToastContainer />
       </div>
     </div>

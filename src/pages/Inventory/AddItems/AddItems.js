@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
@@ -10,22 +9,20 @@ const AddItems = () => {
   const [user] = useAuthState(auth);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data)
-    const url = `https://safe-brook-20632.herokuapp.com/product`;
-    fetch (url,{
-      method: 'POST',
-      headers:{
-        'content-type':'application/json'
+    fetch("https://safe-brook-20632.herokuapp.com/product", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "content-type": "application/json",
       },
-      body: JSON.stringify(data)
-
+      body: JSON.stringify({ data }),
     })
-    .then (res => res.json())
-    .then (result => {
-      toast('Stock Added Successfully');
-    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        toast("Stock Update Successfully");
+      })
+      
   };
-
 
   return (
     <div className=" container my-5 ">
@@ -34,15 +31,19 @@ const AddItems = () => {
         <div className="w-75 mx-auto">
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
-             value={user?.email}
-             readOnly
+              value={user?.email}
+              readOnly
               className="w-100 my-1 p-1 m"
               {...register("email")}
             />
             <input placeholder="Product Name" className="w-100 my-1 p-1" {...register("name")} />
             <input placeholder="Photo URL" className="w-100 my-1 p-1" {...register("img")} />
             <div className="d-flex justify-content-around">
-              <input placeholder="Supplier" className="w-50 me-1 my-1 p-1" {...register("supplier")} />
+              <input
+                placeholder="Supplier"
+                className="w-50 me-1 my-1 p-1"
+                {...register("supplier")}
+              />
               <input placeholder="Quantity" className="w-50 my-1 p-1" {...register("quantity")} />
             </div>
             <div className="d-flex justify-content-around">
