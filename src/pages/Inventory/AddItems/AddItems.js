@@ -10,7 +10,7 @@ const AddItems = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     fetch("https://safe-brook-20632.herokuapp.com/product", {
-      method: "POST", // or 'PUT'
+      method: "POST", 
       headers: {
         "content-type": "application/json",
       },
