@@ -2,9 +2,12 @@
 
 Website Live Link:(https://comfort-shoes-a8089.web.app/).
 
-# This is My Comfort Shoes Sarver Site
+# This is My Comfort Shoes Client Site
 
-Website Sarver Code Link:(https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-AbdulHakim201103).
+Website Client Code Link:(https://github.com/AbdulHakim201103/comfort-shoes).
+# This is My Comfort Shoes Server Site
+
+Website Server Code Link:(https://github.com/AbdulHakim201103/comfort-shoes-sarver).
 
 ## Website Summary Bullet Point:
 
